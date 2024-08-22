@@ -1,1 +1,1 @@
-console.log("Hello World! (from create-block-wp-multi-block block)");
+console.log("Hello World! (from the multi-block tutorial)");

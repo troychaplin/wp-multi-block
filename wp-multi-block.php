@@ -1,7 +1,8 @@
 <?php
+
 /**
- * Plugin Name:       Wp Multi Block
- * Description:       Example block scaffolded with Create Block tool.
+ * Plugin Name:       WP Multi Block
+ * Description:       Example plugin for creating multiple blocks in a single plugin.
  * Requires at least: 6.1
  * Requires PHP:      7.0
  * Version:           0.1.0
@@ -13,18 +14,15 @@
  * @package CreateBlock
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
+if (! defined('ABSPATH')) {
+	exit;
 }
 
 /**
- * Registers the block using the metadata loaded from the `block.json` file.
- * Behind the scenes, it registers also all assets so they can be enqueued
- * through the block editor in the corresponding context.
- *
- * @see https://developer.wordpress.org/reference/functions/register_block_type/
+ * Registers static blocks using the metadata loaded from the `block.json` file.
  */
-function create_block_wp_multi_block_block_init() {
-	register_block_type( __DIR__ . '/build' );
+function create_block_wp_multi_block_block_init()
+{
+	register_block_type(__DIR__ . '/build');
 }
-add_action( 'init', 'create_block_wp_multi_block_block_init' );
+add_action('init', 'create_block_wp_multi_block_block_init');
