@@ -21,10 +21,17 @@ if (! defined('ABSPATH')) {
 /**
  * Registers static blocks using the metadata loaded from the `block.json` file.
  */
-function create_block_wp_multi_block_block_init()
+function multiblock_register_blocks()
 {
-	register_block_type(__DIR__ . '/build/blocks/block-one');
-	register_block_type(__DIR__ . '/build/blocks/block-two');
-	register_block_type(__DIR__ . '/build/blocks/block-three');
+	$custom_blocks = [
+		'block-one',
+		'block-two',
+		'block-three',
+		'block-four',
+	];
+
+	foreach ($custom_blocks as $block) {
+		register_block_type(__DIR__ . '/build/blocks/' . $block);
+	}
 }
-add_action('init', 'create_block_wp_multi_block_block_init');
+add_action('init', 'multiblock_register_blocks');
