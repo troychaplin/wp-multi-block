@@ -11,9 +11,5 @@
   "supports": {
     "html": false
   },
-  "textdomain": "block-one",
-  "editorScript": "file:./index.js",
-  "editorStyle": "file:./index.css",
-  "style": "file:./style-index.css",
-  "viewScript": "file:./view.js"
+  "textdomain": "wp-multi-block"
 }
